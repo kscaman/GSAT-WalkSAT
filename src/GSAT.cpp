@@ -145,8 +145,8 @@ int main(int argc,char* argv[])
 
 
 
-	printf("[GSAT, filename=%s , iterations:%d , max try:%d , greedy factor :%f , rnd method :%d , heuristic method :%d]\n",
-			filename,iterations,maxTry,greedyFactor,rndMethod,hMethod);
+	// printf("[GSAT, filename=%s , iterations:%d , max try:%d , greedy factor :%f , rnd method :%d , heuristic method :%d]\n",
+	// 		filename,iterations,maxTry,greedyFactor,rndMethod,hMethod);
 
 
 	struct timeval start, end;
@@ -168,7 +168,7 @@ int main(int argc,char* argv[])
 	mtime = ((seconds) * 1000 + useconds/1000.0) + 0.5;
 
 
-	printf("Elapsed time: %ld milliseconds\n", mtime);
+	// printf("Elapsed time: %ld milliseconds\n", mtime);
 
 
 	return eval;
