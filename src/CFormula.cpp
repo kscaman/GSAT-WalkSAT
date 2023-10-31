@@ -365,17 +365,17 @@ bool CFormula::startGSAT(int iterations,int maxTry,int fillMethod,int hMethod)
 		negClauseMean+=this->nClauses-clNum;
 		elaborateMean+=clNum-initGuess;
 
-
-		printf("[iteration %d, fill :%d, heuristic :%d] - init Guess :%d - final Guess :%d - model found :%d\n",i,fMethod,heuristic,initGuess,clNum,fEval);
+		printf("%d\n", j+1)
+		// printf("[iteration %d, fill :%d, heuristic :%d] - init Guess :%d - final Guess :%d - model found :%d\n",i,fMethod,heuristic,initGuess,clNum,fEval);
 
 		if (fEval)
 			break;
 	}
 
 
-	printf("Elaborate mean :%f\n",elaborateMean/(float)i);
-	printf("Initial guess mean :%f\n",initGuessMean/(float)i);
-	printf("Neg clause mean :%f\n",negClauseMean/(float)i);
+	// printf("Elaborate mean :%f\n",elaborateMean/(float)(i+1));
+	// printf("Initial guess mean :%f\n",initGuessMean/(float)(i+1));
+	// printf("Neg clause mean :%f\n",negClauseMean/(float)(i+1));
 
 
 
