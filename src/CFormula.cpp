@@ -271,7 +271,7 @@ bool CFormula::startGSAT(int iterations,int maxTry,int fillMethod,int hMethod)
 	float negClauseMean=0;	// -- average number of negative clauses
 	float elaborateMean=0; 	// -- averate number of elaboration
 	bool fEval=false;
-	int i;
+	int i,j;
 
 	for (i=0;i<iterations;i++)
 	{
@@ -306,7 +306,7 @@ bool CFormula::startGSAT(int iterations,int maxTry,int fillMethod,int hMethod)
 			break;
 
 
-		for (int j=0;j<maxTry;j++)
+		for (j=0;j<maxTry;j++)
 		{
 			int choice=0;
 
@@ -365,7 +365,6 @@ bool CFormula::startGSAT(int iterations,int maxTry,int fillMethod,int hMethod)
 		negClauseMean+=this->nClauses-clNum;
 		elaborateMean+=clNum-initGuess;
 
-		printf("%d\n", j+1)
 		// printf("[iteration %d, fill :%d, heuristic :%d] - init Guess :%d - final Guess :%d - model found :%d\n",i,fMethod,heuristic,initGuess,clNum,fEval);
 
 		if (fEval)
